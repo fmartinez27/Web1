@@ -1,0 +1,11 @@
+table {
+  width: 300px;
+}
+
+td {
+  border-bottom: solid 1px;
+  text-align: center;
+}
+thead {color:blue}
+tbody {color:red}
+tfoot {color:green}

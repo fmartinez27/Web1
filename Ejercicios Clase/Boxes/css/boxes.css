@@ -1,0 +1,96 @@
+.encabezado {
+  background-color: #CCCCFF;
+  border: 5px;
+  border-color: black;
+  border-style: solid;
+  color: pink;
+  height: 90px;
+  text-align: left;
+}
+
+.cuerpo {
+  background-color: #666666;
+  border: 5px;
+  border-color: black;
+  border-style: solid;
+  color: white;
+  height: 300px;
+  padding: 10px;
+
+}
+
+.pie {
+  background-color: #00CCFF;
+  border: 5px;
+  border-color: black;
+  border-style: solid;
+  height: 50px;
+  padding: 5px;
+}
+
+.izq-pannel {
+  background-color: #6FF666;
+  border: 2px;
+  border-color: black;
+  border-style: solid;
+  display: inline-block;
+  height: 300px;
+  padding: 5px;
+  width: 15%;
+
+}
+
+.cen-pannel {
+  background-color: #66DD66;
+  border: 2px;
+  border-color: black;
+  border-style: solid;
+  display: inline-block;
+  height: 300px;
+  margin: 5px;
+  width: 40%;
+}
+
+.der-pannel {
+  background-color: #6666AA;
+  border: 2px;
+  border-color: black;
+  border-style: solid;
+  display: inline-block;
+  height: 300px;
+  margin: 5px;
+  width: 40%;
+}
+
+.pie-pannel {
+  background-color: #6666AA;
+  border: 2px;
+  border-color: black;
+  border-style: solid;
+  display: inline-block;
+  height: 100%;
+  /**margin: 1px; **/
+  width: 100%;
+}
+
+.navigation {
+  border-bottom: 5px solid #8bc34a;
+  background: black;
+  margin: 0 ;
+  padding: 0;
+}
+
+
+ li {
+  display: inline-block;
+  color: white;
+  margin: 0;
+  padding: 20px 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+
+}
+
+.navigation li:hover {
+  background-color: grey;
+}

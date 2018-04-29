@@ -1,0 +1,39 @@
+.ejercicio{
+  border: 1px solid black;
+  margin-bottom: 2px;
+  padding: 5px;
+}
+
+.inputForm {
+  display: block;
+  margin: 2px;
+
+}
+
+.inputForm.input {
+  float: left;
+}
+
+.recivedParameters {
+  color: red;
+}
+
+
+
+/**
+* #.# Section title
+*
+* Description of section, whether or not it has media queries, etc.
+*/
+
+.selector {
+    float: left;
+}
+
+
+
+/* This is a comment about this selector */
+.another-selector {
+    position: absolute;
+    top: 0 !important; /* I should explain why this is so !important */
+}

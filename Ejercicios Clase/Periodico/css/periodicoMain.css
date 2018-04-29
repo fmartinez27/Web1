@@ -1,0 +1,80 @@
+.encabezado {
+  background-color: white;
+  border: 1px;
+  border-color: black;
+  border-style: solid;
+  color: pink;
+  height: 90px;
+  text-align: left;
+}
+.logo {
+  height: 90px;
+
+}
+.contenedor{
+  vertical-align: top;
+  clear: both;
+  border: 1px solid;
+  margin-top: 40px;
+}
+  .noticias {
+  background-color: white;
+  border: 1px;
+  border-color: black;
+  border-style: solid;
+  display:inline-block;
+  width: 70%;
+  /*height: 700px;
+  padding: 5px;
+
+  margin: 0;*/
+}
+
+.publicity {
+  background-color: white;
+  border: 1px;
+  border-color: black;
+  border-style: solid;
+  display:inline-block;
+  width: 29%;
+/**  height: 700px;
+
+  margin: 0;
+  padding: 0;**/
+}
+
+.footer {
+  background-color: red;
+  border: 1px;
+  border-color: black;
+  border-style: solid;
+  height: 50px;
+  padding: 5px;
+}
+
+.publiImage {
+  float: left;
+
+}
+
+.navigation {
+  border-bottom: 5px solid red;
+  background: black;
+  margin: 0 ;
+  padding: 0;
+}
+
+
+ li {
+  display: inline-block;
+  color: white;
+  margin: 0;
+  padding: 10px 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+
+}
+
+.navigation li:hover {
+  background-color: red;
+}

@@ -30,3 +30,23 @@ p {
   border-color: black;
   border-width: medium;
 }
+.special{
+  background-color: yellow;
+  border-color: red;
+  border-width: medium;
+  padding: 5px;
+  padding-left: 10px;
+}
+ul {
+  background: green;
+}
+li {
+  font-family: cursive;
+}
+.encabezado {
+  position: relative;
+  height: 150px;
+  top: 10px;
+  text-align: left;
+  background-color: #CCCCCC;
+}

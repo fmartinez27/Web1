@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/ejercicios.css">
+    <title></title>
+  </head>
+  <body >
+  <div class="ejercicio">
+    <p>Ejercicio 1</p>
+    <input type="text" id="texto">
+    <button onclick="agregar()">agregar</button>
+  </div>
+  <div class="ejercicio">
+    <p>Ejercicio 2</p>
+    <input type="number" id="numbers">
+    <button onclick="validar()">validar</button>
+  </div>
+  <div class="ejercicio">
+    <p>Ejercicio 3</p>
+    <input type="number" id="numbers1">
+    <br>
+    <input type="number" id="numbers2">
+    <br>
+    <button onclick="validar2()">validar</button>
+  </div>
+  <div class="ejercicio">
+    <p>Ejercicio 4</p>
+    <input onkeyup="checkWord()" type="text" id="viernes">
+    <p id="mensaje"  >mensaje:</p>
+  </div>
+  <div class="ejercicio">
+    <p>Ejercicio 6  </p>
+    <form class="" action="main.html" method="get" id="datosPersonales">
+      <div class="inputForm">
+        <p>Name :</p>
+        <input type="text" id="firstname" name="firstname">
+      </div>
+      <div class="inputForm">
+        <p>Lastname :</p>
+        <input type="text" id="lastname" name="lastname">
+      </div>
+      <div class="inputForm">
+        <p>Email :</p>
+        <input type="text" id="email" name="email">
+      </div>
+
+      <!--input onsubmit="checkForm()" type="submit" name="enviar" value="ENVIAR"-->
+      <!--input type="submit" onclick="checkForm()"> Check </button -->
+    </form>
+    <textarea name="comment" rows="8" cols="80" form="datosPersonales"></textarea>
+    <p id="errorForm"  ></p>
+
+    <button onclick="checkForm()">ENVIAR</button>
+    <div class="recivedParameters">
+      <div id="recivedName"></div>
+      <div id="recivedLastname"></div>
+      <div id="recivedEmail"></div>
+      <div id="recivedCommnet"></div>
+
+    </div>
+
+  </div>
+
+    <script src="js/ejemplo.js"></script>
+  </body>
+</html>
