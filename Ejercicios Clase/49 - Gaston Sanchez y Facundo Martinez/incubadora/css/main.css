@@ -1,0 +1,54 @@
+.logo {
+  border: 1px solid grey;
+  background-color: grey;
+  height: 40px;
+}
+
+.menu {
+  border: 1px solid black;
+  background-color: grey;
+}
+
+.navigationBar {
+  border-bottom: 5px solid #aa2211;
+  background: #aa1177;
+  margin: 0 ;
+  padding: 0;
+}
+
+
+ li {
+  display: inline-block;
+  color: white;
+  margin: 0;
+  padding: 10px 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+
+}
+
+.navigationBar li:hover {
+  background-color: #aa2211;
+}
+
+
+.dashboard {
+  border: 0px solid grey;
+  background-color: grey;
+  height: 100%;
+  padding: 0px;
+}
+
+.idea {
+  border: 1px solid #aa2211;
+  border-bottom: 5px solid #aa2211;
+  float: left;
+  height: 300px;
+  width: 33%;
+}
+.image {
+  /*float: right; */
+  height: 50px;
+  width: 50px;
+
+}
