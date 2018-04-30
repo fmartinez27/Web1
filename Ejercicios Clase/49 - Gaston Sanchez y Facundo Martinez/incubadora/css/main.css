@@ -44,6 +44,7 @@
   border-bottom: 5px solid #aa2211;
   float: left;
   height: 300px;
+  padding: 2px; 
   width: 33%;
 }
 .image {
