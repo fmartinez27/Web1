@@ -1,7 +1,21 @@
 .logo {
-  border: 1px solid grey;
   background-color: grey;
-  height: 40px;
+  height: 10  0px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.maintitle {
+
+  font: arial;
+  font-size: 100px;
+  color: white;
+
+}
+
+.imagelogo{
+  display: inline-block;
+  height: 100px;
 }
 
 .menu {
@@ -41,15 +55,19 @@
 
 .idea {
   border: 1px solid #aa2211;
-  border-bottom: 5px solid #aa2211;
+  border-bottom: 10px solid #aa2211;
+  /* border-radius: 15px; */
+  background-color: #ffe;
   float: left;
   height: 300px;
-  padding: 2px; 
+  padding: 2px;
+  /* margin: 1px; */
   width: 33%;
 }
 .image {
-  /*float: right; */
-  height: 50px;
-  width: 50px;
+  display: inline-block;
+
+  height: 80px;
+  width: 120px;
 
 }

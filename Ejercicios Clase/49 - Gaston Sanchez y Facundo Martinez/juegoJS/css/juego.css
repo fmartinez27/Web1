@@ -1,0 +1,62 @@
+.logo {
+  width: 100%;
+  height: 100px;
+  border: 1px solid black;
+}
+
+.main-title {
+  font-size: 50px;
+  color: black;
+  text-align: center;
+}
+
+.main-section {
+background-color: grey;
+  width: 100%;
+  height: 800px;
+  border: 1px solid black;
+}
+
+.player-section {
+  display: block;
+  background-color: white;
+  margin-left: 20px;
+  margin-right: 20px;
+
+  height: 90%;
+  border: 1px solid black;
+}
+
+.casillero {
+  display: block;
+  background-color: black;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+
+  height: 40%;
+  border: 1px solid black;
+}
+
+.action-section {
+  display: block;
+  background-color: black;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+
+  height: 20%;
+  border: 1px solid black;
+}
+
+.tablero-puntos {
+  text-align: center;
+  display: block;
+  background-color: grey;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+
+  height: 30%;
+  border: 1px solid black;
+}

@@ -2,26 +2,41 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Piedra, papel o tijera?</title>
+    <link rel="stylesheet" href="css/juego.css">
+    <title>Juego de la memoria</title>
   </head>
   <body>
-    <div class="mainsection">
-      <div class="player_section">
-        <div class="jugar">
 
-        </div>
-        <div class="puntos">
-
+    <header>
+      <div class="logo">
+        <div class="main-title">
+          <p>Juego de la memoria</p>
         </div>
       </div>
-      <div class="player_section">
-        <div class="jugar">
+    </header>
+
+    <div class="main-section">
+      <div class="player-section">
+        <div class="casillero">
 
         </div>
-        <div class="puntos">
+        <div class="action-section">
 
+        </div>
+        <div class="tablero-puntos">
+          <div class="puntos">
+            <p>Puntos Totales</p>
+            <input type="text" id="aciertos-totales" name="aciertos-totales" value="0">
+            <input type="text" id="errores-totales" name="errores-totales" value="0">
+          </div>
+          <div class="puntos">
+            <p>Puntos parciales</p>
+            <input type="text" id="aciertos-parciales" name="aciertos-parciales" value="0">
+            <input type="text" id="errores-parciales" name="errores-parciales" value="0">
+          </div>
         </div>
       </div>
     </div>
+
   </body>
 </html>
