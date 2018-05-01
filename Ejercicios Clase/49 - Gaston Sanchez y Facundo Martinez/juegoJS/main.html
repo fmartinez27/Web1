@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/juego.css">
+
     <title>Juego de la memoria</title>
   </head>
   <body>
@@ -18,20 +19,20 @@
     <div class="main-section">
       <div class="player-section">
         <div class="casillero">
-          <div class="casilla">
-
+          <div class="casilla" id="casilla-0">
+              <p>N1</p>
           </div>
-          <div class="casilla">
-
+          <div class="casilla" id="casilla-1">
+              <p>N2</p>
           </div>
-          <div class="casilla">
-
+          <div class="casilla"  id="casilla-2">
+              <p>N3</p>
           </div>
-          <div class="casilla">
-
+          <div class="casilla" id="casilla-3">
+              <p>N4</p>
           </div>
-          <div class="casilla">
-
+          <div class="casilla" id="casilla-4">
+              <p>N5</p>
           </div>
         </div>
         <div class="action-section">
@@ -39,7 +40,7 @@
           <div class="button" id="button-seleccionar">
             Select
           </div>
-          <div class="button" id="button-seleccionar">
+          <div onclick="comenzarInicial()" class="button" id="button-comenzar">
             Comenzar
           </div>
         </div>
@@ -57,6 +58,6 @@
         </div>
       </div>
     </div>
-
+    <script src="js/juego.js"></script>
   </body>
 </html>

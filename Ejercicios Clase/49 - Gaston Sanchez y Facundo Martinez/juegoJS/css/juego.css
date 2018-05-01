@@ -12,8 +12,7 @@
 }
 
 .main-section {
-background-color: grey;
-  
+  background-color: grey;
   height: 800px;
   border: 1px solid black;
   padding: 20px;
@@ -22,10 +21,8 @@ background-color: grey;
 .player-section {
   display: block;
   background-color: white;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: 0 20px;
   text-align: center;
-
   border: 1px solid black;
   align-content: center;
   padding: 20px;
@@ -40,22 +37,18 @@ background-color: grey;
   height: 20px;
   width: 100px;
   border: 1px solid white;
+  margin: 5 auto;
 }
 
 .button:hover {
   background-color: white;
   border: 1px solid pink;
-
 }
 
 .casillero {
-  display: block;
   background-color: black;
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
-  align-content: center;
-
+  margin: 20px 20px 0 20px;
+  /**align-content: center;**/
   border: 1px solid black;
   padding: 20px;
 }
@@ -75,14 +68,10 @@ background-color: grey;
 .action-section {
   display: block;
   background-color: black;
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: 20px 20px 0 20px;
   align-content: center;
-
   border: 1px solid black;
   padding: 20px;
-
 }
 
 .tablero-puntos {
