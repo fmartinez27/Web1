@@ -2,17 +2,18 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/juego.css">
-
     <title>Juego de la memoria</title>
   </head>
   <body>
 
     <header>
-      <div class="logo">
-        <div class="main-title">
-          <p>Juego de la memoria</p>
-        </div>
+      <div class="logo" id="logo">
+        <img src='img/brain-logo.gif'>
+      </div>
+      <div class="main-title">
+        <p class="titular">Juego de la memoria</p>
       </div>
     </header>
 
@@ -20,40 +21,50 @@
       <div class="player-section">
         <div class="casillero">
           <div class="casilla" id="casilla-0">
-              <p>N1</p>
+              <img src='img/card-back.png' class='imagen-casilla' >
           </div>
           <div class="casilla" id="casilla-1">
-              <p>N2</p>
+              <img src='img/card-back.png' class='imagen-casilla' >
           </div>
           <div class="casilla"  id="casilla-2">
-              <p>N3</p>
+              <img src='img/card-back.png' class='imagen-casilla' >
           </div>
           <div class="casilla" id="casilla-3">
-              <p>N4</p>
+              <img src='img/card-back.png' class='imagen-casilla' >
           </div>
           <div class="casilla" id="casilla-4">
-              <p>N5</p>
+              <img src='img/card-back.png' class='imagen-casilla' >
           </div>
         </div>
+        <div class="message-section" id="countdown">
+
+        </div>
         <div class="action-section">
-          <input type="text" id="numero-casilla" name="numero-casilla" value="">
+          <label for="" id="message-delay">Ingrese los segundos que tardaran en darse vuelta las cartas</label>
+          <input type="number" class="action-input" id="delay-cartas" name="" value="3">
+          <label for="" id="message-num-casilla">Ingrese un numero del 1 al 5</label>
+          <input type="text" class="action-input" id="numero-casilla" name="numero-casilla" value="" maxlength="1">
           <div class="button" id="button-seleccionar">
             Select
           </div>
-          <div onclick="comenzarInicial()" class="button" id="button-comenzar">
+          <div class="button" id="button-comenzar">
             Comenzar
           </div>
         </div>
         <div class="tablero-puntos">
-          <div class="puntos">
-            <p>Puntos Totales</p>
-            <input type="text" id="aciertos-totales" name="aciertos-totales" value="0">
-            <input type="text" id="errores-totales" name="errores-totales" value="0">
+          <div class="points-box">
+            <label>Puntos parciales</label>
+            <label class="points-label" for="">Asserts: </label>
+            <input class="points" type="text" id="aciertos-parciales" name="aciertos-parciales" value="0" disabled>
+            <label class="points-label" for="">Errors:  </label>
+            <input class="points" type="text" id="errores-parciales" name="errores-parciales" value="0" disabled>
           </div>
-          <div class="puntos">
-            <p>Puntos parciales</p>
-            <input type="text" id="aciertos-parciales" name="aciertos-parciales" value="0">
-            <input type="text" id="errores-parciales" name="errores-parciales" value="0">
+          <div class="points-box">
+            <label>Puntos Totales</label>
+            <label class="points-label" for="">Asserts:  </label>
+            <input class="points" type="text" id="aciertos-totales" name="aciertos-totales" value="0" disabled>
+            <label class="points-label" for="">Errors:  </label>
+            <input class="points" type="text" id="errores-totales" name="errores-totales" value="0" disabled>
           </div>
         </div>
       </div>

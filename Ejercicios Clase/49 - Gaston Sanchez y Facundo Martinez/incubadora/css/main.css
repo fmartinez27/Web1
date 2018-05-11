@@ -48,6 +48,7 @@ header{
 a{
   text-decoration: none;
   color: white;
+  cursor: pointer;
 }
 
 .navigation-bar li:hover {
@@ -56,7 +57,7 @@ a{
 
 
 .dashboard {
-  background-color: grey;
+  background-color: black;
   height: 100%;
   padding: 0px;
 }
@@ -66,12 +67,12 @@ a{
   border: 1px solid #aa2211;
   border-bottom: 10px solid #aa2211;
   /* border-radius: 15px; */
-  background-color: lightblue;
+  background-color: white;
   float: left;
-  height: 300px;
+  height: 235px;
   padding: 2px;
-  /* margin: 1px; */
-  width: 33%;
+  margin: 1px;
+  width: 32.9%;
 }
 
 .image {
@@ -83,42 +84,143 @@ a{
 
 .idea-title {
   float: left;
-  font-size: 25px;
-
+  font-size: 20px;
+  margin-left: 5px;
+  color: #aa1177;
 }
 
 .description{
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  border-bottom: 1px solid #aa1177;
+  margin: 1px 5px;
   clear: both;
 }
 
 .creator{
-    font-size: 25px;
+    font-size: 20 px;
     float: left;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .idea-action{
   color: black;
   opacity: 0;
-  border: 1px solid black;
-  border-top-left-radius: 100px;
-  background-color: green;
-  width: 150px;
-  height: 120px;
+  border: 1px solid #aa1177;
+  border-radius: 100px;
+  background-color: #aa1177;
+  width: 250px;
+  height: 55px;
   float: right;
   transition-duration: 1s;
+  padding: 1px;
+  margin-top: 5px;
 }
 
 .idea-action:hover{
-  opacity: 0.5;
-  background-color: yellow;
+  opacity: 0.6  ;
+  background-color: white;
 }
 
-/**#prueba{
-  border: 1px solid black;
+.idea-action p {
+  color: red;
+  /**position: relative;**/
+  display: block;
+  opacity: 1;
+  margin: 0 10px;
+}
+
+.idea-action-icon {
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  margin: 5px 10px;
+}
+
+.idea-action-icon:hover {
+  /* width: 38px;
+  height: 38px; */
+  cursor: pointer;
+  background-color: #aa1177;
+}
+
+
+/**Ranking page**/
+table{
+  margin-top: 20px;
+  border: 3px solid black;
+  width: 100%;
+}
+
+th{
+  border: 1px solid #aa1177;
+  height: 80px;
+}
+
+thead :nth-child(1){
+    width: 3%;
+}
+
+thead :nth-child(2){
+    width: 25%;
+}
+
+thead :nth-child(3){
+    width: 45%;
+}
+
+thead :nth-child(4){
+    width: 3%;
+}
+
+thead :nth-child(5){
+    width: 6%;
+}
+
+thead :nth-child(6){
+    width: 6%;
+}
+
+thead :nth-child(7){
+    width: 6%;
+}
+
+td{
+  border: 1px solid #aa1177;
+  height: 50px;
+}
+
+tbody tr :nth-child(1){
+    font-size: 30px;
+    text-align: center;
+}
 
 
 
 
-}**/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****/
