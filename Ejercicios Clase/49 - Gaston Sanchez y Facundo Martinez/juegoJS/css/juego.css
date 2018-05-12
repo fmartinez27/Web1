@@ -78,7 +78,29 @@ header{
   margin: 0 20px;
   height: 40px;
   text-align: center;
+  font-size: 20px;
   color: red;
+}
+
+.message-delay{
+  display: block;
+  margin: 0;
+  color: lightblue;
+  font-size: 20px;
+}
+
+.message-delay-hidden {
+  display: none;
+}
+
+.message-num-casilla{
+  display: block;
+  margin: 0;
+  color: lightblue;
+  font-size: 20px;
+}
+.message-num-casilla-hidden{
+  display: none;
 }
 
 .action-section {
@@ -91,13 +113,19 @@ header{
 }
 
 .action-input{
+    display: block;
     margin: 0 auto;
     text-align: center;
 }
 
+.action-input-hidden{
+    display: none;
+}
+
 .button {
+  display: block;
   background-color: pink;
-  margin: 0 auto;
+  margin: 5px auto;
   text-align: center;
   height: 20px;
   width: 100px;
@@ -107,6 +135,10 @@ header{
 .button:hover {
   background-color: white;
   border: 1px solid pink;
+}
+
+.button-hidden {
+  display: none;
 }
 
 label{

@@ -7,21 +7,21 @@ header{
   font: arial;
   font-size: 40px;
   color: white;
-  width: 80%;
-  border: 1px solid black;
+  width: 50%;
   float: left;
   padding-left: 10px;
+  text-align: right;
 }
 
 .logo {
   float: right;
-  padding: 5px;
-  border: 1px solid black;
-  width: 10%;
-
+  padding: 0px;
 }
 
-.imagelogo{
+.image-logo{
+  width: auto;
+  height: 130px;
+  margin: 0;
 }
 
 .menu {
@@ -147,12 +147,13 @@ a{
 /**Ranking page**/
 table{
   margin-top: 20px;
-  border: 3px solid black;
+  /**border: 3px solid black; **/
   width: 100%;
+  text-align: center;
 }
 
 th{
-  border: 1px solid #aa1177;
+  border: 2px solid #aa1177;
   height: 80px;
 }
 
@@ -187,6 +188,17 @@ thead :nth-child(7){
 td{
   border: 1px solid #aa1177;
   height: 50px;
+  padding: 3px;
+}
+
+td :nth-child(2) {
+  text-align: left;
+  text-indent: 5px;
+}
+
+td :nth-child(3) {
+  text-align: left;
+  text-indent: 5px;
 }
 
 tbody tr :nth-child(1){
@@ -195,13 +207,57 @@ tbody tr :nth-child(1){
 }
 
 
+/**Submit Idea**/
+
+.left-pannel{
+border: 0px solid black;
+padding: 10px;
+width: 49%;
+float: left;
+text-align: center;
+background-color: black;
+}
+
+.right-pannel{
+  padding: 10px;
+  width: 48%;
+  margin-top: 100px;
+  float:right;
+  height: 600px;
+}
+
+.image-new-idea{
+  width: 70%;
+}
+
+.label-form{
+  font-size: 20px;
+  font-style: normal;
+  margin: 20px 0;
+  color: #aa1177;
+}
+
+.input-form{
 
 
+}
 
+.row{
+  margin: 10px;
 
+}
 
+.column-left{
+text-align: right;
+  display: inline-block;
+  width: 45%;
+}
 
-
+.column-right{
+text-align: left;
+display: inline-block;
+width: 45%;
+}
 
 
 

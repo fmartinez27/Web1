@@ -8,9 +8,12 @@ let wonGamesCounter = 0;
 
 document.getElementById("button-comenzar").addEventListener("click", comenzarInicial);
 document.getElementById("button-seleccionar").addEventListener("click", seleccionarCasilla);
-document.getElementById("button-seleccionar").style.display = 'none';
-document.getElementById("message-num-casilla").style.display = 'none';
-document.getElementById("numero-casilla").style.display = 'none';
+document.getElementById("button-seleccionar").classList.replace('button','button-hidden');
+document.getElementById("message-num-casilla").classList.replace('message-num-casilla','message-num-casilla-hidden');
+document.getElementById("numero-casilla").classList.replace('action-input','action-input-hidden');
+document.getElementById('message-delay').classList.replace('message-delay-hidden','message-delay');
+document.getElementById("delay-cartas").classList.replace('action-input-hidden','action-input');
+
 /**
 1 = Tiene un elemento
 0 = No tiene elemento
@@ -43,6 +46,8 @@ function checkLostGame(){
 }
 
 function seleccionarCasilla(){
+  end=-1;
+  document.getElementById('countdown').innerHTML = '';
   let casillaNumber = document.getElementById('numero-casilla').value;
   let id = 0;
   let idGlobo = 0;
@@ -64,41 +69,41 @@ function seleccionarCasilla(){
       totalSessionErrors++;
       actualizarPuntos();
     } else if ((casillero[casillaNumber-1] == 2) || (casillero[casillaNumber-1] == 3)){
-      alert("Number already used. Please select other number!");
+      document.getElementById('countdown').innerHTML = "Number already used. Please select other number!";
     }
   }else{
-    alert("Wrong value for this game! Insert a number between 1 and 5.");
+    document.getElementById('countdown').innerHTML = "Wrong value for this game! Insert a number between 1 and 5.";
   }
   if (checkCompleted()){
     document.getElementById('countdown').innerHTML = 'Congrats!!! You have found all globes!';
-    document.getElementById("button-seleccionar").style.display = 'none';
+    document.getElementById("button-seleccionar").classList.replace('button','button-hidden');
     document.getElementById('numero-casilla').value = "";
     totalPartialErrors=0;
     totalPartialAsserts=0;
     actualizarPuntos();
-    document.getElementById('message-delay').style.display = 'block';
-    document.getElementById('delay-cartas').style.display = 'block';
-    document.getElementById('button-comenzar').style.display = 'block';
-    document.getElementById("message-num-casilla").style.display = 'none';
-    document.getElementById("numero-casilla").style.display = 'none';
+    document.getElementById('message-delay').classList.replace('message-delay-hidden','message-delay');
+    document.getElementById("delay-cartas").classList.replace('action-input-hidden','action-input');
+    document.getElementById("button-comenzar").classList.replace('button-hidden','button');
+    document.getElementById("message-num-casilla").classList.replace('message-num-casilla','message-num-casilla-hidden');
+    document.getElementById("numero-casilla").classList.replace('action-input','action-input-hidden');
     wonGamesCounter++;
   }else if(checkLostGame()){
     document.getElementById('countdown').innerHTML = 'Sorry!! You lost the game!';
-    document.getElementById("button-seleccionar").style.display = 'none';
+    document.getElementById("button-seleccionar").classList.replace('button','button-hidden');
     document.getElementById('numero-casilla').value = "";
     totalPartialErrors=0;
     totalPartialAsserts=0;
     actualizarPuntos();
-    document.getElementById('message-delay').style.display = 'block';
-    document.getElementById('delay-cartas').style.display = 'block';
-    document.getElementById('button-comenzar').style.display = 'block';
-    document.getElementById("message-num-casilla").style.display = 'none';
-    document.getElementById("numero-casilla").style.display = 'none';
+    document.getElementById('message-delay').classList.replace('message-delay-hidden','message-delay');
+    document.getElementById("delay-cartas").classList.replace('action-input-hidden','action-input');
+    document.getElementById("button-comenzar").classList.replace('button-hidden','button');
+    document.getElementById("message-num-casilla").classList.replace('message-num-casilla','message-num-casilla-hidden');
+    document.getElementById("numero-casilla").classList.replace('action-input','action-input-hidden');
   }
   document.getElementById('numero-casilla').value = '';
   limpiarCasillas(casillero);
   if (wonGamesCounter == 3){
-    alert('CONGRATS!! You are an expert in this game')
+    alert('CONGRATS!! You are an expert in this game');
     wonGamesCounter = 0;
   }
 }
@@ -118,11 +123,11 @@ function dibujarCasilleroInicial(casillero){
   for (let i = 0; i < 5; i++){
     if (casillero[i]==1){
       let id = "casilla-"+i;
-      const globoImagen = "<img src='../juegoJS/img/globo-mobil.gif' class='imagen-casilla'>";
+      let globoImagen = "<img src='../juegoJS/img/globo-mobil.gif' class='imagen-casilla'>";
       document.getElementById(id).innerHTML = globoImagen;
     }else{
       let id = "casilla-"+i;
-      const emptyImagen = "<img src='../juegoJS/img/agua-empty.gif' class='imagen-casilla'>";
+      let emptyImagen = "<img src='../juegoJS/img/agua-empty.gif' class='imagen-casilla'>";
       document.getElementById(id).innerHTML = emptyImagen;
     }
   }
@@ -130,15 +135,15 @@ function dibujarCasilleroInicial(casillero){
 
 let end = 0;
 function showRemaining() {
-  end = end - 1;
+
   if (end < 0) {
-    document.getElementById('countdown').innerHTML = '';
     limpiarCasillas(casillero);
     return;
   }else if(end < 1){
     document.getElementById('countdown').innerHTML = 'Start!!';
   }else
   document.getElementById('countdown').innerHTML = end;
+  end = end - 1;
 }
 
 function comenzarInicial(){
@@ -151,12 +156,12 @@ function comenzarInicial(){
     invertirCasillero(casillero);
   }
   dibujarCasilleroInicial(casillero);
-  document.getElementById('button-comenzar').style.display = 'none';
-  document.getElementById('message-delay').style.display = 'none';
-  document.getElementById('delay-cartas').style.display = 'none';
-  document.getElementById("message-num-casilla").style.display = 'block';
-  document.getElementById("numero-casilla").style.display = 'block';
-  document.getElementById("button-seleccionar").style.display = 'block';
+  document.getElementById("button-comenzar").classList.replace('button','button-hidden');
+  document.getElementById('message-delay').classList.replace('message-delay','message-delay-hidden');
+  document.getElementById("delay-cartas").classList.replace('action-input','action-input-hidden');
+  document.getElementById("message-num-casilla").classList.replace('message-num-casilla-hidden','message-num-casilla');
+  document.getElementById("numero-casilla").classList.replace('action-input-hidden','action-input');
+  document.getElementById("button-seleccionar").classList.replace('button-hidden','button');
   end = document.getElementById('delay-cartas').value;
   setInterval(showRemaining, 1000);
   gamesCounter++;

@@ -11,7 +11,7 @@
         <p>Ideas Incubator</p>
       </div>
       <div class="logo">
-        <p>Imagen</p>
+        <img  class="image-logo" src="../img/ideas/logo3.jpeg" alt="logo" >
       </div>
       <div class="menu">
         <div >
@@ -27,12 +27,67 @@
     </header>
     <div class="mainSection">
       <div class="new_idea">
-        <form class="" action="../main.html" method="post">
-          <input type="text" name="title" value="">
-          <input type="text" name="theme" value="">
-          <input type="text" name="impact" value="">
-          <input type="image" name="image" value="">
-          <input type="text" name="description" value="">
+        <form class="" action="../main.html" method="post" id="new-idea-form">
+          <div class="left-pannel">
+            <img  class="image-new-idea" src="../img/ideas/new-idea.jpg" alt="logo" >
+          </div>
+          <div class="right-pannel">
+            <div class="row">
+              <div class="column-left">
+                <label class="label-form" for="">Ingrese el nombre de su idea:</label>
+              </div>
+              <div class="column-right">
+                <input type="text" name="title" value="">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="column-left">
+                <label class="label-form" for="">Ingrese que tipo de impacto tendrá:</label>
+              </div>
+              <div class="column-right">
+                <input type="text" name="impact" value="">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="column-left">
+                <label class="label-form" for="">Ingrese el tema de su idea:</label>
+              </div>
+              <div class="column-right">
+                <input type="text" name="theme" value="">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="column-left">
+                <label class="label-form" for="">Ingrese la descripción de su idea:</label>
+              </div>
+              <div class="column-right">
+                <textarea name="description" rows="15" cols="60" form="new-idea-form"></textarea>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="column-left">
+                <label class="label-form" for="">Ingrese la imagen de su idea:</label>
+              </div>
+              <div class="column-right">
+                <input type="file" name="filename" accept="image/gif, image/jpeg, image/png"><br>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="column-left">
+                <input type="button" name="publish" value="Publicar">
+              </div>
+              <div class="column-right">
+                <input type="button" name="cancel" value="Cancelar">
+              </div>
+            </div>
+
+          </div>
+
         </form>
       </div>
     </div>
