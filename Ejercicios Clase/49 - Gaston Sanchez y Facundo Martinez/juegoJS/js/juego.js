@@ -1,4 +1,14 @@
-let casillero = [];
+let pathCardGlobe = 'img/globo-mobil.gif';
+let pathCardEmpty = 'img/agua-empty.gif';
+let pathCardBack = 'img/card-back.png';
+let pathCardWrong = 'img/wrong-2.png';
+/** CardsLine is a controls array, we will be setting up different flags to determine the status of the game during the whole game.
+1 = Tiene un elemento
+0 = No tiene elemento
+2 = acierta el elemento
+3 = no acierta el elemento
+**/
+let cardsLine = [];
 let totalSessionErrors = 0;
 let totalSessionAsserts = 0;
 let totalPartialErrors = 0;
@@ -6,7 +16,7 @@ let totalPartialAsserts = 0;
 let gamesCounter = 0;
 let wonGamesCounter = 0;
 
-document.getElementById("button-comenzar").addEventListener("click", comenzarInicial);
+document.getElementById("button-comenzar").addEventListener("click", startGame);
 document.getElementById("button-seleccionar").addEventListener("click", seleccionarCasilla);
 document.getElementById("button-seleccionar").classList.replace('button','button-hidden');
 document.getElementById("message-num-casilla").classList.replace('message-num-casilla','message-num-casilla-hidden');
@@ -14,13 +24,7 @@ document.getElementById("numero-casilla").classList.replace('action-input','acti
 document.getElementById('message-delay').classList.replace('message-delay-hidden','message-delay');
 document.getElementById("delay-cartas").classList.replace('action-input-hidden','action-input');
 
-/**
-1 = Tiene un elemento
-0 = No tiene elemento
-2 = acierta el elemento
-3 = no acierta el elemento
-**/
-function actualizarPuntos(){
+function updateScores(){
   document.getElementById('aciertos-totales').value = totalSessionAsserts;
   document.getElementById('errores-totales').value = totalSessionErrors;
   document.getElementById('errores-parciales').value = totalPartialErrors;
@@ -29,7 +33,7 @@ function actualizarPuntos(){
 
 function checkCompleted(){
   for (let i = 0; i < 5; i++){
-    if (casillero[i]==1){
+    if (cardsLine[i]==1){
       return false;
     }
   }
@@ -38,7 +42,7 @@ function checkCompleted(){
 
 function checkLostGame(){
   for (let i = 0; i < 5; i++){
-    if (casillero[i]==0){
+    if (cardsLine[i]==0){
       return false;
     }
   }
@@ -46,29 +50,29 @@ function checkLostGame(){
 }
 
 function seleccionarCasilla(){
-  end=-1;
+  timming=-1;
   document.getElementById('countdown').innerHTML = '';
-  let casillaNumber = document.getElementById('numero-casilla').value;
+  let cardNumber = document.getElementById('numero-casilla').value;
   let id = 0;
   let idGlobo = 0;
-  if (casillaNumber > 0 && casillaNumber < 6){
-    if(casillero[casillaNumber-1] == 1){
-      casillero[casillaNumber-1] = 2;
-      id = casillaNumber-1;
+  if (cardNumber > 0 && cardNumber < 6){
+    if(cardsLine[cardNumber-1] == 1){
+      cardsLine[cardNumber-1] = 2;
+      id = cardNumber-1;
       id = "casilla-"+id;
-      limpiarCasillas(casillero);
+      drawCards(cardsLine);
       totalSessionAsserts++;
       totalPartialAsserts++;
-      actualizarPuntos();
-    } else if (casillero[casillaNumber-1] == 0){
-      casillero[casillaNumber-1] = 3;
-      id = casillaNumber-1;
+      updateScores();
+    } else if (cardsLine[cardNumber-1] == 0){
+      cardsLine[cardNumber-1] = 3;
+      id = cardNumber-1;
       id = "casilla-"+id;
-      limpiarCasillas(casillero);
+      drawCards(cardsLine);
       totalPartialErrors++;
       totalSessionErrors++;
-      actualizarPuntos();
-    } else if ((casillero[casillaNumber-1] == 2) || (casillero[casillaNumber-1] == 3)){
+      updateScores();
+    } else if ((cardsLine[cardNumber-1] == 2) || (cardsLine[cardNumber-1] == 3)){
       document.getElementById('countdown').innerHTML = "Number already used. Please select other number!";
     }
   }else{
@@ -80,7 +84,7 @@ function seleccionarCasilla(){
     document.getElementById('numero-casilla').value = "";
     totalPartialErrors=0;
     totalPartialAsserts=0;
-    actualizarPuntos();
+    updateScores();
     document.getElementById('message-delay').classList.replace('message-delay-hidden','message-delay');
     document.getElementById("delay-cartas").classList.replace('action-input-hidden','action-input');
     document.getElementById("button-comenzar").classList.replace('button-hidden','button');
@@ -93,7 +97,7 @@ function seleccionarCasilla(){
     document.getElementById('numero-casilla').value = "";
     totalPartialErrors=0;
     totalPartialAsserts=0;
-    actualizarPuntos();
+    updateScores();
     document.getElementById('message-delay').classList.replace('message-delay-hidden','message-delay');
     document.getElementById("delay-cartas").classList.replace('action-input-hidden','action-input');
     document.getElementById("button-comenzar").classList.replace('button-hidden','button');
@@ -101,94 +105,89 @@ function seleccionarCasilla(){
     document.getElementById("numero-casilla").classList.replace('action-input','action-input-hidden');
   }
   document.getElementById('numero-casilla').value = '';
-  limpiarCasillas(casillero);
+  drawCards(cardsLine);
   if (wonGamesCounter == 3){
     alert('CONGRATS!! You are an expert in this game');
     wonGamesCounter = 0;
   }
 }
 
-function agregarElementosAlAzar(casillero){
-  casillero[0] = 1;
+function addRandomCards(cardsLine){
+  cardsLine[0] = 1;
   for ( i = 1; i < 5; i++){
     if (Math.random() > 0.5){
-      casillero[i] = 1;
+      cardsLine[i] = 1;
     }else{
-      casillero[i] = 0;
+      cardsLine[i] = 0;
     }
   }
 }
 
-function dibujarCasilleroInicial(casillero){
+function showFrontCards(cardsLine){
   for (let i = 0; i < 5; i++){
-    if (casillero[i]==1){
-      let id = "casilla-"+i;
-      let globoImagen = "<img src='../juegoJS/img/globo-mobil.gif' class='imagen-casilla'>";
-      document.getElementById(id).innerHTML = globoImagen;
+    let id = "casilla-"+i;
+    if (cardsLine[i]==1){
+      document.getElementById(id).childNodes[1].src = pathCardGlobe;
     }else{
-      let id = "casilla-"+i;
-      let emptyImagen = "<img src='../juegoJS/img/agua-empty.gif' class='imagen-casilla'>";
-      document.getElementById(id).innerHTML = emptyImagen;
+      document.getElementById(id).childNodes[1].src = pathCardEmpty;
     }
   }
 }
 
-let end = 0;
+let timming = 0;
 function showRemaining() {
-
-  if (end < 0) {
-    limpiarCasillas(casillero);
+  if (timming < 0) {
+    drawCards(cardsLine);
     return;
-  }else if(end < 1){
+  }else if(timming < 1){
     document.getElementById('countdown').innerHTML = 'Start!!';
   }else
-  document.getElementById('countdown').innerHTML = end;
-  end = end - 1;
+  document.getElementById('countdown').innerHTML = timming;
+  timming = timming - 1;
 }
 
-function comenzarInicial(){
-  actualizarPuntos();
-  limpiarCasillas(casillero);
+function startGame(){
+  updateScores();
+  drawCards(cardsLine);
   if ((gamesCounter % 2)== 0){
-    agregarElementosAlAzar(casillero);
+    addRandomCards(cardsLine);
   }
   else{
-    invertirCasillero(casillero);
+    invertcardsLine(cardsLine);
   }
-  dibujarCasilleroInicial(casillero);
+  showFrontCards(cardsLine);
   document.getElementById("button-comenzar").classList.replace('button','button-hidden');
   document.getElementById('message-delay').classList.replace('message-delay','message-delay-hidden');
   document.getElementById("delay-cartas").classList.replace('action-input','action-input-hidden');
   document.getElementById("message-num-casilla").classList.replace('message-num-casilla-hidden','message-num-casilla');
   document.getElementById("numero-casilla").classList.replace('action-input-hidden','action-input');
   document.getElementById("button-seleccionar").classList.replace('button-hidden','button');
-  end = document.getElementById('delay-cartas').value;
+  timming = document.getElementById('delay-cartas').value;
   setInterval(showRemaining, 1000);
   gamesCounter++;
 }
 
-function limpiarCasillas(casillero){
+function drawCards(cardsLine){
   for (let i = 0; i < 5; i++){
       let id = "casilla-"+i;
-      if((casillero[i]==0) || (casillero[i]==1) ){
-        document.getElementById(id).innerHTML =  "<img src='img/card-back.png' class='imagen-casilla' >";
-      } else if (casillero[i]==2){
-        document.getElementById(id).innerHTML =  "<img src='img/globo-mobil.gif' class='imagen-casilla' >";
+      if((cardsLine[i]==0) || (cardsLine[i]==1) ){
+        document.getElementById(id).childNodes[1].src = pathCardBack;
+      } else if (cardsLine[i]==2){
+        document.getElementById(id).childNodes[1].src = pathCardGlobe;
       } else {
-        document.getElementById(id).innerHTML =  "<img src='img/wrong-2.png' class='imagen-casilla' >";
+        document.getElementById(id).childNodes[1].src = pathCardWrong;
       }
   }
 }
 
-function invertirCasillero(casillero){
-  casillero[0] = 1;
+function invertcardsLine(cardsLine){
+  cardsLine[0] = 1;
   for(let i = 1; i < 5; i++){
-    if ((casillero[i] ==0) || (casillero[i] == 3)){
-      casillero[i] = 1;
+    if ((cardsLine[i] ==0) || (cardsLine[i] == 3)){
+      cardsLine[i] = 1;
     }
     else{
-      casillero[i] = 0;
+      cardsLine[i] = 0;
     }
   }
-
 }
