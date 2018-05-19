@@ -58,16 +58,16 @@ function seleccionarCasilla(){
   if (cardNumber > 0 && cardNumber < 6){
     if(cardsLine[cardNumber-1] == 1){
       cardsLine[cardNumber-1] = 2;
-      id = cardNumber-1;
-      id = "casilla-"+id;
+    //  id = cardNumber-1;
+      //id = "casilla-"+id;
       drawCards(cardsLine);
       totalSessionAsserts++;
       totalPartialAsserts++;
       updateScores();
     } else if (cardsLine[cardNumber-1] == 0){
       cardsLine[cardNumber-1] = 3;
-      id = cardNumber-1;
-      id = "casilla-"+id;
+      //id = cardNumber-1;
+      //id = "casilla-"+id;
       drawCards(cardsLine);
       totalPartialErrors++;
       totalSessionErrors++;

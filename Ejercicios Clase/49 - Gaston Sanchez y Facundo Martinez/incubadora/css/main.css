@@ -79,7 +79,6 @@ a{
   height: 80px;
   width: 120px;
   float: right;
-
 }
 
 .idea-title {
@@ -244,19 +243,18 @@ background-color: black;
 
 .row{
   margin: 10px;
-
 }
 
 .column-left{
-text-align: right;
+  text-align: right;
   display: inline-block;
   width: 45%;
 }
 
 .column-right{
-text-align: left;
-display: inline-block;
-width: 45%;
+  text-align: left;
+  display: inline-block;
+  width: 45%;
 }
 
 
