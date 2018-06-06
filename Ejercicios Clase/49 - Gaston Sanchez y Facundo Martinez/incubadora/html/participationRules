@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Ideas Incubator</title>
+  </head>
+  <body>
+    <header>
+      <div class="maintitle">
+        <p>Ideas Incubator</p>
+      </div>
+      <div class="logo">
+        <img  class="image-logo" src="../img/ideas/logo3.jpeg" alt="logo" >
+      </div>
+      <div class="menu">
+        <div>
+          <ul class="navigation-bar">
+            <a href="../index.html"><li>Dashboard</li></a>
+            <li>Ranking</li>
+            <a href="newIdea.html"><li>New idea</li></a>
+            <a href="newUser.html"><li>New User</li></a>
+          </ul>
+        </div>
+      </div >
+    </header>
+    <section class="mainSection">
+      <section class="ranking">
+      </section>
+    </section>
+    <footer></footer>
+  </body>
+</html>
