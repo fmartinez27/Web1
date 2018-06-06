@@ -1,0 +1,184 @@
+header{
+  position: relative;
+  width: 100%;
+  height: 120px;
+}
+
+.logo {
+  background-color: black;
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+}
+
+#logo img{
+    position: absolute;
+    height: 100%;
+}
+
+.titular{
+  font-size: 90px;
+  color: gray;
+  margin: 0;
+}
+
+.main-title {
+  position: absolute;
+  margin-left: 20%;
+  color: black;
+  text-align: center;
+  vertical-align: middle;
+  width: 80%;
+  background-color: black;
+  height: 100%;
+}
+
+.main-section {
+  background-color: grey;
+  height: 100%;
+  border: 1px solid black;
+  padding: 20px;
+  clear: both;
+}
+
+.player-section {
+  display: block;
+  background-color: white;
+  margin: 0 20px;
+  text-align: center;
+  border: 1px solid black;
+  align-content: center;
+  padding: 20px;
+}
+
+.casillero {
+  background-color: black;
+  margin: 20px;
+  margin-bottom: 0;
+  /**align-content: center;**/
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.casillero:hover {
+
+}
+
+.casilla {
+  background-color: lightblue;
+  display: inline-block;
+  width: 200px;
+  height: 250px;
+  border: 1px solid white;
+  border-radius: 7%;
+}
+
+.message-section{
+  margin: 0 20px;
+  height: 40px;
+  text-align: center;
+  font-size: 20px;
+  color: red;
+}
+
+.message-delay{
+  display: block;
+  margin: 0;
+  color: lightblue;
+  font-size: 20px;
+}
+
+.message-delay-hidden {
+  display: none;
+}
+
+.message-num-casilla{
+  display: block;
+  margin: 0;
+  color: lightblue;
+  font-size: 20px;
+}
+.message-num-casilla-hidden{
+  display: none;
+}
+
+.action-section {
+  display: block;
+  background-color: black;
+  margin: 0 20px 40px 20px;
+  text-align: center;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.action-input{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.action-input-hidden{
+    display: none;
+}
+
+.button {
+  display: block;
+  background-color: pink;
+  margin: 5px auto;
+  text-align: center;
+  height: 20px;
+  width: 100px;
+  border: 1px solid white;
+}
+
+.button:hover {
+  background-color: white;
+  border: 1px solid pink;
+}
+
+.button-hidden {
+  display: none;
+}
+
+label{
+  color: white;
+  display: block;
+  margin: 5px 0 2px 0;
+}
+
+input {
+
+}
+
+.imagen-casilla{
+  width: 200px;
+  height: 200px;
+  margin: 20px 5px;
+}
+
+.tablero-puntos {
+  text-align: center;
+  display: block;
+  background-color: black;
+  margin: 20px;
+  padding: 20px;
+  height: 30%;
+  border: 1px solid black;
+}
+
+.points-box {
+    border: 1px solid grey;
+    padding: 2px;
+    margin: 2px 500px;
+}
+
+.points-label {
+  margin: 0 5px;
+  display: inline-block;
+  color: white;
+}
+
+.points {
+  border: 0;
+}
