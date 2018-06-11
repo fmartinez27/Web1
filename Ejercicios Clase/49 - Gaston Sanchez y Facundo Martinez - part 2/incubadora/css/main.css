@@ -16,13 +16,8 @@ header{
 .border{
   border-color: black;
 }
-.visible{
-  visibility: visible;
-}
-@media (max-width: 760px) {
-  .invisible{
-    visibility: hidden;
-  }
+@media (min-width: 760px) {
+
 }
 /*.col-{
   background-color: black;

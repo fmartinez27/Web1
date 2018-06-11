@@ -1,179 +1,92 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<!doctype html>
+<html lang="en">
   <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
-    <title>Ideas Incubator</title>
+    <title>Web 1, part 2</title>
   </head>
   <body>
-    <header>
-      <div class="maintitle">
-        <p>Ideas Incubator</p>
-      </div>
-      <div class="logo">
-        <img  class="image-logo" src="img/ideas/logo3.jpeg" alt="logo" >
-      </div>
-      <div class="menu">
-        <div >
-          <ul class="navigation-bar">
-             <li>Dashboard</li>
-             <a href="html/ranking.html"><li>Ranking</li></a>
-             <a href="html/newIdea.html"><li>New idea</li></a>
-             <a href="html/newUser.html"><li>New User</li></a>
-          </ul>
+    <div class="main-content" id="dashboard">
+      <header>
+        <div class="row maintitle">
+          <div class="border titulo col-8 col-sm-12 d-sm-none d-md-block col-md-8 col-lg-4 col-xl-8">
+            <p>Ideas Incubator</p>
+          </div>
+          <div class="border logo-imagen col-4 col-sm-12 col-md-4 col-lg-8 col-xl-4">
+            <p>Image</p>
+          </div>
         </div>
-      </div >
-    </header>
-    <section class="dashboard">
-      <article class="idea">
-        <div class="idea-title">
-          <p>Checkyourcar</p>
-        </div>
-        <div class="image">
-          <img class="image" src="img/ideas/check-your-car.jpg" alt="chek your car image" >
-        </div>
-        <div class="description">
-          <p>Checkyourcar ofrece la posibilidad de conocer el estado del coche de segunda mano que se quiere comprar antes de hacer la inversión y, así, hacer este mercado más transparente. Desde casa, por Internet, puede solicitarse un informe técnico del coche que se quiere y, en menos de 72 horas se recibirá toda la información necesaria para hacer una buena compra.</p>
-        </div>
-        <div class="creator">
-          <p>Autor: Collin McRae</p>
-        </div>
-        <div class="idea-action">
-          <img class="idea-action-icon" src="img/icons/invest-icon.png" alt="Invest">
-          <img class="idea-action-icon" src="img/icons/donate-icon.png" alt="Donate">
-          <img class="idea-action-icon" src="img/icons/add-value-icon.png" alt="Add value">
-          <img class="idea-action-icon" src="img/icons/like-icon.png" alt="Like">
-        </div>
-      </article>
-      <article class="idea">
-        <div class="idea-title">
-          <p>Codeeta</p>
-        </div>
-        <div class="image">
-          <img class="image" src="img/ideas/codeeta.jpg" alt="codeeta image" >
-        </div>
-        <div class="description">
-          <p>Codeeta es un servicio software que permite: crear, de forma visual y sin programar, miniaplicaciones web personalizadas o widgets con el objetivo de exportarlas a diferentes canales online en formato de widget web, aplicación de Facebook o Gadget de escritorio y gestionar toda su actividad transaccional.</p>
-        </div>
-        <div class="creator">
-          <p>Autor: Bill Portal</p>
-        </div>
-        <div class="idea-action">
-          <img class="idea-action-icon" src="img/icons/invest-icon.png" alt="Invest">
-          <img class="idea-action-icon" src="img/icons/donate-icon.png" alt="Donate">
-          <img class="idea-action-icon" src="img/icons/add-value-icon.png" alt="Add value">
-          <img class="idea-action-icon" src="img/icons/like-icon.png" alt="Like">
-        </div>
-      </article>
+        <nav class="navbar navbar-expand-lg navbar-light row">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active  border" id="dashboard-tab">
+                <a class="nav-link" href="">Dashboard<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item  border">
+                <a class="nav-link" href="#">Ranking</a>
+              </li>
+              <li class="nav-item  border">
+                <a class="nav-link" href="#">New Idea</a>
+              </li>
+              <li class="nav-item border">
+                <a class="nav-link" href="#">New User</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <section class="dashboard row">
+        <article class="border col-12 col-md-6 col-xl-4">
+          <p>Article 1</p>
+        </article>
+        <article class="border col-12 col-md-6 col-xl-4 row">
+          <div class="info-article col-8">
 
-      <article class="idea">
-        <div class="idea-title">
-          <p>EnterBio</p>
-        </div>
-        <div class="image">
-          <img class="image" src="img/ideas/enterbio.jpg" alt="enter bio image" >
-        </div>
-        <div class="description">
-          <p>EnterBio es un supermercado ecológico online con más de 1200 referencias de productos exclusivamente ecológicos. Con 5.000 clientes registrados y 2000 m2 de instalaciones en Mercamadrid, Enterbio, es ya una realidad, y la única plataforma que apuesta seriamente por el sector ecológico y su crecimiento.</p>
-        </div>
-        <div class="creator">
-          <p>Autor: Ronald Reegan</p>
-        </div>
-        <div class="idea-action">
-          <img class="idea-action-icon" src="img/icons/invest-icon.png" alt="Invest">
-          <img class="idea-action-icon" src="img/icons/donate-icon.png" alt="Donate">
-          <img class="idea-action-icon" src="img/icons/add-value-icon.png" alt="Add value">
-          <img class="idea-action-icon" src="img/icons/like-icon.png" alt="Like">
-        </div>
-      </article>
+            <div class="title-article col-12">
 
-      <article class="idea">
-        <div class="idea-title">
-          <p>Glottal Solutions / Glottex Voice Analysis System</p>
-        </div>
-        <div class="image">
-          <img class="image" src="img/ideas/glottex2.jpg" alt="glottal image" >
-        </div>
-        <div class="description">
-          <p>Glottex Voice Analysis System es una iniciativa para la comercialización, desarrollo e investigación de nuevas técnicas, metodologías y productos basados en el análisis de la voz a través de la onda glótica, y con aplicación clínica y biométrica. El equipo promotor lleva más de diez años en el estudio de la onda glótica y una inversión económica en I+D ya completada.</p>
-        </div>
-        <div class="creator">
-          <p>Autor: Martin McFly</p>
-        </div>
-        <div class="idea-action">
-          <img class="idea-action-icon" src="img/icons/invest-icon.png" alt="Invest">
-          <img class="idea-action-icon" src="img/icons/donate-icon.png" alt="Donate">
-          <img class="idea-action-icon" src="img/icons/add-value-icon.png" alt="Add value">
-          <img class="idea-action-icon" src="img/icons/like-icon.png" alt="Like">
-        </div>
-      </article>
+            </div>
+            <div class="description-article col-12">
 
-      <article class="idea" id="prueba">
-        <div class="idea-title">
-          <p>MynMarket.com</p>
-        </div>
-        <div class="image">
-          <img class="image" src="img/ideas/mynmarket.jpg" alt="myn market" >
-        </div>
-        <div class="description">
-          <p>MyntMarket.com es el primer mercadillo online de servicios low-cost de habla hispana. El precio de los servicios es fijo: 5, 10 ó 20 €. Se pueden encontrar grandes servicios de diseño gráfico, traducciones, marketing en redes sociales, secretarias virtuales, diseño de webs, etc a un precio realmente competitivo.</p>
-        </div>
-        <div class="creator">
-          <p>Autor: Edwin Van Beethoven</p>
-        </div>
-        <div class="idea-action">
-          <img class="idea-action-icon" src="img/icons/invest-icon.png" alt="Invest">
-          <img class="idea-action-icon" src="img/icons/donate-icon.png" alt="Donate">
-          <img class="idea-action-icon" src="img/icons/add-value-icon.png" alt="Add value">
-          <img class="idea-action-icon" src="img/icons/like-icon.png" alt="Like">
-        </div>
-      </article>
+            </div>
+            <div class="footer-article col-12">
 
-      <article class="idea">
-        <div class="idea-title">
-          <p>pemaGROUP</p>
-        </div>
-        <div class="image">
-          <img class="image" src="img/ideas/pemagroup.jpg" alt="pema group" >
-        </div>
-        <div class="description">
-          <p>Ante la incidencia de las lesiones, tanto en el ámbito deportivo como en la salud en general, pemaGROUP propone una solución basada en la termografía infrarroja, aplicándola de manera innovadora como medio para la prevención y seguimiento de lesiones en los ámbitos de la actividad física, el deporte y la salud.</p>
-        </div>
-        <div class="creator">
-          <p>Autor: Jhon Kennedy</p>
-        </div>
-        <div class="idea-action">
-          <img class="idea-action-icon" src="img/icons/invest-icon.png" alt="Invest">
-          <img class="idea-action-icon" src="img/icons/donate-icon.png" alt="Donate">
-          <img class="idea-action-icon" src="img/icons/add-value-icon.png" alt="Add value">
-          <img class="idea-action-icon" src="img/icons/like-icon.png" alt="Like">
-        </div>
-      </article>
+            </div>
+          </div>
+          <div class="img-article col-4">
 
-      <article class="idea">
-        <div class="idea-title">
-          <p>Quantyca</p>
-        </div>
-        <div class="image">
-          <img class="image" src="img/ideas/quantyca.jpg" alt="quantyca" >
-        </div>
-        <div class="description">
-          <p>Quantyca ha desarrollado una plataforma tecnológica para la contabilización automática de facturas que garantiza un 100% de aciertos. No tiene costes iniciales y la instalación se completa en minutos, ya que los componentes más complejos están en la nube.</p>
-        </div>
-        <div class="creator">
-          <p>Autor: Lara Croft</p>
-        </div>
-        <div class="idea-action">
-          <img class="idea-action-icon" src="img/icons/invest-icon.png" alt="Invest">
-          <img class="idea-action-icon" src="img/icons/donate-icon.png" alt="Donate">
-          <img class="idea-action-icon" src="img/icons/add-value-icon.png" alt="Add value">
-          <img class="idea-action-icon" src="img/icons/like-icon.png" alt="Like">
-        </div>
-      </article>
+          </div>
 
-    </section>
+        </article>
+        <article class="border col-12 col-md-6 col-xl-4">
+          <p>Article 3</p>
+        </article>
+        <article class="border col-12 col-md-6 col-xl-4">
+          <p>Article 4</p>
+        </article>
+        <article class="border col-12 col-md-6 col-xl-4 ">
+          <p>Article 5</p>
+        </article>
+      </section>
+      <footer class="border">
+        <p>Footer</p>
+      </footer>
+    </div>
 
-    <footer></footer>
-    <!-- http://www.emprendedores.es/crear-una-empresa/elevator-pitch -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/js/main.js">
+
+    </script>
   </body>
 </html>
